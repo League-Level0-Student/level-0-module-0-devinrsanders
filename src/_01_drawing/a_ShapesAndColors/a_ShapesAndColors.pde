@@ -13,6 +13,8 @@
 
 //    The ellipse command looks like this:
 rect(0,0, 0,0);
+fill(#00FFFD);
+rect(0,0, 700,700);
 
  fill(#13D35E);
  ellipse(250,150, 300,300);
@@ -23,6 +25,8 @@ rect(0,0, 0,0);
 //    Change the numbers and re-run the program to see what happens.
 
 // 4. Now add a rect command to draw a rectangle.
+
+
 fill(#715311);
  rect(220,300, 50,250);
 //    The rect command looks like this:  
@@ -37,6 +41,7 @@ ellipse(190,100, 50,50);
 
 fill(#7EE535);
 rect(000,400, 500,100);
+
 //    Like the ellipse, the fist 2 numbers specify where to draw it, the other two are its size.
 //    The main difference is the x and y co-ordinates are the top left corner of the shape.
 //    If the width is the same as the height, it draws a square.
