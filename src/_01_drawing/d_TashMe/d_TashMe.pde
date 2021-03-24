@@ -44,16 +44,15 @@ image (mustache, 700,700);
  
 // 8.  MOVE.  Change the DRAW MUSTACHE code to use      mouseX, mousY      in place of the numbers.
 //     Run the program to see the mustache move around when you move the mouse.
-
-
+if (mousePressed){
+ image(mustache, mouseX-250,mouseY-100);
+}
 // OPTIONAL:
 //     Add an if statement so the mustache is only drawn when the mouse is clicked.
-if(mousePressed) {
-  image(mustache, 100,400);
+
+ 
 }
 //     Add or subtract from mouseX and mouseY when you draw the mustache,
 //               so the mustache center appears where the mouse pointer is
 //     Draw a hat on the sketch when the right mouse button is pressed. Use this code.
 //               if (mouseButton == RIGHT)  {     }
-
-}
