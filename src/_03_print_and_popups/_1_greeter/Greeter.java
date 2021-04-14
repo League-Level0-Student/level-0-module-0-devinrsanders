@@ -9,7 +9,7 @@ public class Greeter {
 		System.out.println("I'm a \"programmer\":\\\n");
 		System.out.println("I'm on my own line");
 		
-		String 
+		
 		
 
 		String input = JOptionPane.showInputDialog("What is your name?");
