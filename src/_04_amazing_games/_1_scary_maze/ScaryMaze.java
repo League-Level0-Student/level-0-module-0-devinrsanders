@@ -23,7 +23,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 	 * If you cannot play sound on this computer, set canPlaySounds to false.
 	 * If you are not sure, ask your teacher 
 	 * *****************/
-	boolean canPlaySounds = false;
+	boolean canPlaySounds = true;
 	
 	boolean started = false;
 	BufferedImage maze;
@@ -61,7 +61,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		//5.  Run your program and move your mouse over the START COLOR. A number will be printed to the console
 		
 		
-		int startColor=7617718;
+		int startColor = -7617718;
 		//6. Change the value of this startColor variable to the number printed in the previous step. 
 		
 		
@@ -89,9 +89,11 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		
 			//9. If the mouse falls off the path (which means it is on the background color)
 			//		call the scare method - scare();
+			
 			if (mouseColor == backround) {
 				scare();
 			}
+			
 			
 	
 			
@@ -108,11 +110,15 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 
 	private void scare() {
 		
+		
+	
+		
 		//Scare your player with scary messages, sounds and pictures
 		
 		System.out.println("BOO!");
 		
-		if (canPlaySounds) {
+		playScarySound("standardScarySound.wav");
+				
 
 			/**********  PLAY A SOUND ***************/
 			//10. Find a scary sound and put it in the _04_amazing_games._1_scary_maze package (where you put your maze picture). 
@@ -130,7 +136,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		//    Use the showScaryImage method below and send it the name of your picture file
 		
 		
-	}
+	
 	
 
 	
