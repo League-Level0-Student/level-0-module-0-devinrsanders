@@ -9,8 +9,8 @@
 // This line of code creates a variable to hold your faccate picture
 // You will use it later.
 PImage cat;
-int x=0;
-int y=0;
+int x=377;
+int y=179;
 
 void setup() {
   
@@ -31,7 +31,12 @@ cat.resize (900,500);
   }
 
 void draw() {
-  background(cat);
+  if (x>width||y>height) {
+    background(cat);
+  x = 377;
+  y = 179;
+  }
+  
 // 6. WHERE IS THE EYE? This code prints the x and y locations of the mouse when you click.
 //    You can use this to find the x and y for the center of the cat's eyes.
       if(mousePressed){
@@ -54,8 +59,8 @@ fill(#FA7F03);
 // 10 Use the ellipse() command to draw a circle on the eye (you will have to guess its size). 
 //    Use the x and y variables you just created to place the ellipse in the correct location.
 //                  The ellipse command looks like this:
-                ellipse(542, 183, 100, 100);
-                ellipse(386, 185, 100, 100);
+                ellipse(x, y, 100, 100);
+                ellipse(x+165, y-4, 100, 100);
 // Run the program to make sure it is in the right place and is the right size.
 }
 
@@ -63,8 +68,8 @@ fill(#FA7F03);
 //      the space bar. Run the program to test it.
 //      If you want it to move to the left, change to x-1=.
 void keyPressed() {
-    x-=1;
-    y+=1;
+    x+=6;
+    y+=6;
     
 // 12.  If you want them to go faster, add more than one each time the key is pressed    
 }
